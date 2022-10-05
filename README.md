@@ -37,7 +37,8 @@ Every chapter in the book receives its own folder, i.e.
 [`chapter/01-getting-started`](chapter/01-getting-started/README.md):
 
 1. 🟢 [Getting Started](chapter/01-getting-started/README.md)
-2. 🟡 [Programming a Guessing Game](chapter/02-guessing-game/README.md)
+2. 🟢 [Programming a Guessing Game](chapter/02-guessing-game/README.md)
+3. ⚪ Common Programming Concepts
 
 Unless otherwise specified, the only tools _required_ to be installed are:
 
@@ -66,7 +67,7 @@ Then, edit [Cargo.toml](./Cargo.toml) and add the new workspace member:
 
 ```toml
 members = [
-  // ...
+  # ...
   "chapter/00-chapter-name",
 ]
 ```
