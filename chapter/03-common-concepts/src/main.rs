@@ -1,4 +1,5 @@
 fn main() {
+    // Review of concepts.
     variables_and_mutability();
     constants();
     shadowing();
@@ -8,6 +9,12 @@ fn main() {
     tuples();
     arrays();
     control_flow();
+
+    // Exercises.
+    // See: https://doc.rust-lang.org/book/ch03-05-control-flow.html#summary.
+    convert_temperatures();
+    generate_finobacci();
+    twelve_days_of_christmas();
 }
 
 fn variables_and_mutability() {
@@ -128,5 +135,62 @@ fn control_flow() {
 
     for number in (1..4).rev() {
         println!("{number}!");
+    }
+}
+
+/// Converts between Farenheit and Celsius.
+fn convert_temperatures() {
+    // While this could be relatively fancy (using sum types), keep it simple.
+    let farenheit = [-459.67, -40.0, 0.0, 32.0, 98.6, 212.0];
+    let celsius = farenheit.map(|f| (f - 32.0) / 1.8);
+    println!("Farenheit: {:?}", farenheit);
+    println!("Celsius:   {:?}", celsius);
+}
+
+/// Generates the nth Fibonacci number.
+fn generate_finobacci() {
+    fn fib(n: u32) -> u32 {
+        if n < 2 {
+            n
+        } else {
+            fib(n - 2) + fib(n - 1)
+        }
+    }
+
+    println!("fib(5)  = {:?}", fib(5));
+    println!("fib(13) = {:?}", fib(13));
+}
+
+/// Print the lyrics to the Christmas carol "The Twelve Days of Christmas".
+fn twelve_days_of_christmas() {
+    let numbers = [
+        "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth",
+        "tenth", "eleventh", "twelfth",
+    ];
+
+    let verses = [
+        "A partridge in a pear tree",
+        "Two turtle doves, and",
+        "Three french hens",
+        "Four calling birds",
+        "Five golden rings",
+        "Six geese a-laying",
+        "Seven swans a-swimming",
+        "Eight maids a-milking",
+        "Nine ladies dancing",
+        "Ten lords a-leaping",
+        "Eleven pipers piping",
+        "Twelve drummers drumming",
+    ];
+
+    for verse in 0..verses.len() {
+        println!("[Verse {:}]", verse + 1);
+        println!(
+            "On the {:} day of Christmas, my true love sent to me",
+            numbers[verse]
+        );
+        for line in 0..verse + 1 {
+            println!("{:}", verses[verse - line]);
+        }
     }
 }

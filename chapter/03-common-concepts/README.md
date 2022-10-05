@@ -261,3 +261,33 @@ However, `if` is also an expression:
 #### `loop`
 
 Mostly either `loop { ... }`, `while <cond> { ... }`, or `for x in a { ... }`.
+
+## Notes
+
+I had to use more expressive
+[formatted print](https://doc.rust-lang.org/rust-by-example/hello/print.html) in these examples.
+
+Some examples:
+
+```rs
+// Simple stringified replacements.
+println!("{} days", 31);
+
+// Positional arguments.
+println!("{0}, this is {1}. {1}, this is {0}", "Alice", "Bob");
+
+// Named arguments.
+println!("{subject} {verb} {object}",
+         object="The dog",
+         subject="the fox",
+         verb="jumps over");
+
+// Different formatting.
+println!("Base ... 10 {0} 2 {0:b} 8 {0:o} 16 {0:x} {0:X}", 69420);
+
+// Right-align text, i.e. "    1".
+println!("{:>5}", 1);
+
+// "00001".
+println!("{0:>5}", 1);
+```
