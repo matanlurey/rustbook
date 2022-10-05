@@ -5,4 +5,5 @@ members = [
   "chapter/02-guessing-game",
   "chapter/03-common-concepts",
   "chapter/04-understanding-ownership",
+  "chapter/05-using-structs",
 ]

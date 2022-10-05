@@ -118,7 +118,7 @@ And the `String` located `@0xFF` looks like this:
 
 | index | value |
 | ----- | ----- |
-| `0`   | h     |
+| `0`   | H     |
 | `1`   | e     |
 | `2`   | l     |
 | `3`   | l     |
@@ -173,4 +173,194 @@ Rust can also use a value without transferring ownership, called a _reference_.
 
 ## References and Borrowing
 
+The issue with the above (`takes_ownership`) is that we have to return the
+`String` to the calling function so we can still use the `String` after the
+call to `take_ownership`. Instead, we can provide a _reference_ to the `String`
+value:
+
+- A _reference_ is like a pointer in that's an address we can follow.
+- _Unlike_ a pointer, a reference is guaranteed to point to a valid value.
+
+`<Stack>`:
+
+| name | value     |
+| ---- | --------- |
+| ptr  | `@0x00FF` |
+
+`@0x00FF`:
+
+| name     | value     |
+| -------- | --------- |
+| ptr      | `@0xFF00` |
+| len      | `5`       |
+| capacity | `5`       |
+
+`@0xFF00`:
+
+| index | value |
+| ----- | ----- |
+| `0`   | H     |
+| `1`   | e     |
+| `2`   | l     |
+| `3`   | l     |
+| `4`   | o     |
+
+The `&x` syntax lets us create a reference that _refers_ to `x`, but does not
+_own_ it.
+
+Because it does not own it, the value it points to will not be dropped
+when the reference stops being used:
+
+```rs
+// Here x goes into scope (is allocated).
+let x = String::from("Hello");
+let l = calculate_length(&x);
+
+fn calculate_length(s: &String) -> usize {
+   s.len();
+   // Here s goes out of scope, but since it's a reference, it's not dropped.
+}
+
+// Here x goes out of scope, and it is dropped.
+```
+
+We call the action of creating a reference **borrowing**.
+
+As in real life, you can _borrow_ something from someone else, but when you're
+done, you have to give it back (you don't own it):
+
+```rs
+let x = String::from("Hello");
+change(&x);
+
+fn change(s: &String) {
+   // ERROR: Cannot borrow `*some_string` as mutable
+   s.push_str(" World");
+}
+```
+
+To fix the code, we need a _mutable reference_:
+
+```rs
+let x = String::from("Hello");
+change(&x);
+
+fn change(s: &mut String) {
+   // ERROR: Cannot borrow `*some_string` as mutable
+   s.push_str(" World");
+}
+```
+
+Mutable references have one big restriction: if you have a mutable reference to
+a value, you can have no other references to that value.
+
+This code that attempts to create two mutable references to `x` will fail:
+
+```rs
+let x = String::from("Hello");
+let a = &mut x;
+// ERROR: Cannot borrow `x` as mutable more than once at a time.
+let b = &mut x;
+println!("{}, {}", a, b);
+```
+
+This prevents what is called a _data race_, or:
+
+- Two or more pointers accessing the same data at the same time.
+- At least one of the pointers is being used to write to the data.
+- There's no mechanism being used to synchronize across to the data.
+
+One option is also creating a new scope:
+
+```rs
+let x = String::from("Hello");
+{
+   let a = &mut x;
+}
+let b = &mut x;
+```
+
+### Dangling References
+
+A _dangling pointer_ references a location in memory given to someone else. In
+Rust, the compiler guarantees that references will never be dangling references;
+if you have a reference to some data, the compiler will ensure that the data
+will not go out of scope before the reference to the data does:
+
+```rs
+fn a() {
+   let a = b();
+}
+
+// ERROR: Missing lifetime specifier.
+fn b() -> &String {
+   let b = String::from("Hello");
+   &b
+}
+```
+
+To fix this, return the `String` directly:
+
+```rs
+fn a() {
+   let a = b();
+}
+
+fn b() -> String {
+   let b = String::from("Hello");
+   b
+}
+```
+
+This works! Ownership is moved out, and nothing is deallocated.
+
+**tl;dr**:
+
+1. References are always valid
+2. At any given time, you can have _either_ one mutable reference _or_ any
+   number of immutable references.
+
+The next kind of reference is a _slice_.
+
 ## The `Slice` Type
+
+A _slice_ _references_ a contiguous sequence of elements in a collection:
+
+```rs
+let x = String::from("Hello World");
+let h = &x[/*0*/..5];
+let w = &x[6../*11*/];
+```
+
+`x`:
+
+| name     | value     |
+| -------- | --------- |
+| ptr      | `@0xFF00` |
+| len      | `11`      |
+| capacity | `11`      |
+
+`w`:
+
+| name | value     |
+| ---- | --------- |
+| ptr  | `@0xFF05` |
+| len  | `5`       |
+
+`@0xFF00`:
+
+| index | value |
+| ----- | ----- |
+| `0`   | H     |
+| `1`   | e     |
+| `2`   | l     |
+| `3`   | l     |
+| `4`   | o     |
+| `5`   |       |
+| `6`   | W     |
+| `7`   | o     |
+| `8`   | r     |
+| `9`   | l     |
+| `10`  | d     |
+
+Ultimately, _string literals (`&str`) are immutable **references**_!
