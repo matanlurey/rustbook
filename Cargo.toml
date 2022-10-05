@@ -3,4 +3,5 @@
 members = [
   "chapter/01-getting-started",
   "chapter/02-guessing-game",
+  "chapter/03-common-concepts",
 ]

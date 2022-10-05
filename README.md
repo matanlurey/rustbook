@@ -38,7 +38,7 @@ Every chapter in the book receives its own folder, i.e.
 
 1. 🟢 [Getting Started](chapter/01-getting-started/README.md)
 2. 🟢 [Programming a Guessing Game](chapter/02-guessing-game/README.md)
-3. ⚪ Common Programming Concepts
+3. 🟢 [Common Programming Concepts](chapter/03-common-concepts/README.md)
 
 Unless otherwise specified, the only tools _required_ to be installed are:
 
