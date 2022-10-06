@@ -13,6 +13,10 @@ name = "common-concepts"
 version = "0.1.0"
 
 [[package]]
+name = "enums-patterns"
+version = "0.1.0"
+
+[[package]]
 name = "getrandom"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -26,6 +30,10 @@ dependencies = [
 [[package]]
 name = "getting-started"
 version = "0.0.0"
+
+[[package]]
+name = "growing-projects"
+version = "0.1.0"
 
 [[package]]
 name = "guessing-game"

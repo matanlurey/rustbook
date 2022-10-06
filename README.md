@@ -37,13 +37,15 @@ Every chapter in the book receives its own folder, i.e.
 [`chapter/01-getting-started`](chapter/01-getting-started/README.md):
 
 1. 🟢 [Getting Started](chapter/01-getting-started/README.md)
-2. 🟢 [Programming a Guessing Game](chapter/02-guessing-game/README.md)
-3. 🟢 [Common Programming Concepts](chapter/03-common-concepts/README.md)
-4. 🟢 [Understanding Ownership](chapter/04-understanding-ownership/README.md)
-5. 🟡 [Using Structs to Structure Related Data](chapter/05-using-structs/README.md)
-6. ⚪ Enums and Pattern Matching
-7. ⚪ Managing Growing Projects
-8. ⚪ Common Collections
+1. 🟢 [Programming a Guessing Game](chapter/02-guessing-game/README.md)
+1. 🟢 [Common Programming Concepts](chapter/03-common-concepts/README.md)
+1. 🟢 [Understanding Ownership](chapter/04-understanding-ownership/README.md)
+1. 🟢 [Using Structs to Structure Related Data](chapter/05-using-structs/README.md)
+1. 🟢 [Enums and Pattern Matching](chapter/06-enums-patterns/README.md)
+1. 🟡 [Managing Growing Projects](chapter/07-growing-projects/README.md)
+1. ⚪ Common Collections
+1. ⚪ Error Handling
+1. ⚪ Generic Types, Traits, and Lifetimes
 
 Unless otherwise specified, the only tools _required_ to be installed are:
 

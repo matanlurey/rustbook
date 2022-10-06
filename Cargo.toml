@@ -6,4 +6,6 @@ members = [
   "chapter/03-common-concepts",
   "chapter/04-understanding-ownership",
   "chapter/05-using-structs",
+  "chapter/06-enums-patterns",
+  "chapter/07-growing-projects",
 ]
