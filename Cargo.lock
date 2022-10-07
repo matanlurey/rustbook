@@ -34,6 +34,9 @@ version = "0.0.0"
 [[package]]
 name = "growing-projects"
 version = "0.1.0"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "guessing-game"

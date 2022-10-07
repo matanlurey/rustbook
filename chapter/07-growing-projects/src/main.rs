@@ -1,3 +1,7 @@
+/// Looks for a file named "lib.rs" and will insert its contents under the scope "lib".
+mod lib;
+
 fn main() {
-    println!("Hello, world!");
+    let result = lib::do_thing();
+    println!("Rolled a D6: {result}");
 }
