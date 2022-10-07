@@ -42,8 +42,8 @@ Every chapter in the book receives its own folder, i.e.
 1. 🟢 [Understanding Ownership](chapter/04-understanding-ownership/README.md)
 1. 🟢 [Using Structs to Structure Related Data](chapter/05-using-structs/README.md)
 1. 🟢 [Enums and Pattern Matching](chapter/06-enums-patterns/README.md)
-1. 🟡 [Managing Growing Projects](chapter/07-growing-projects/README.md)
-1. ⚪ Common Collections
+1. 🟢 [Managing Growing Projects](chapter/07-growing-projects/README.md)
+1. 🟡 Common Collections
 1. ⚪ Error Handling
 1. ⚪ Generic Types, Traits, and Lifetimes
 

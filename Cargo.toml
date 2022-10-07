@@ -8,4 +8,5 @@ members = [
   "chapter/05-using-structs",
   "chapter/06-enums-patterns",
   "chapter/07-growing-projects",
+  "chapter/08-common-collections",
 ]
