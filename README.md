@@ -46,8 +46,8 @@ Every chapter in the book receives its own folder, i.e.
 1. 🟢 [Common Collections](chapter/08-common-collections/README.md)
 1. 🟢 [Error Handling](chapter/09-error-handling/README.md)
 1. 🟢 [Generic Types, Traits, and Lifetimes](chapter/10-generics-traits-lifetimes/README.md)
-1. 🟡 Writing Automated Tests
-1. ⚪ An I/O Project: Building a Command Line Program
+1. 🟢 [Writing Automated Tests](chapter/11-automated-tests/README.md)
+1. 🟡 An I/O Project: Building a Command Line Program
 1. ⚪ Functional Langauge Features: Iterators and Closures
 1. ⚪ More about Cargo and Crates.io
 
