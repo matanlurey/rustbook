@@ -13,6 +13,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "cli-program"
+version = "0.1.0"
+
+[[package]]
 name = "common-collections"
 version = "0.1.0"
 dependencies = [
@@ -29,6 +33,10 @@ version = "0.1.0"
 
 [[package]]
 name = "error-handling"
+version = "0.1.0"
+
+[[package]]
+name = "functional-features"
 version = "0.1.0"
 
 [[package]]
@@ -69,6 +77,10 @@ name = "libc"
 version = "0.2.134"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "329c933548736bc49fd575ee68c89e8be4d260064184389a5b77517cddd99ffb"
+
+[[package]]
+name = "more-cargo"
+version = "0.1.0"
 
 [[package]]
 name = "ppv-lite86"

@@ -12,4 +12,7 @@ members = [
   "chapter/09-error-handling",
   "chapter/10-generics-traits-lifetimes",
   "chapter/11-automated-tests",
+  "chapter/12-cli-program",
+  "chapter/13-functional-features",
+  "chapter/14-more-cargo",
 ]
