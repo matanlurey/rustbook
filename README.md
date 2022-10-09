@@ -43,9 +43,13 @@ Every chapter in the book receives its own folder, i.e.
 1. 🟢 [Using Structs to Structure Related Data](chapter/05-using-structs/README.md)
 1. 🟢 [Enums and Pattern Matching](chapter/06-enums-patterns/README.md)
 1. 🟢 [Managing Growing Projects](chapter/07-growing-projects/README.md)
-1. 🟡 Common Collections
-1. ⚪ Error Handling
-1. ⚪ Generic Types, Traits, and Lifetimes
+1. 🟢 [Common Collections](chapter/08-common-collections/README.md)
+1. 🟢 [Error Handling](chapter/09-error-handling/README.md)
+1. 🟢 [Generic Types, Traits, and Lifetimes](chapter/10-generics-traits-lifetimes/README.md)
+1. 🟡 Writing Automated Tests
+1. ⚪ An I/O Project: Building a Command Line Program
+1. ⚪ Functional Langauge Features: Iterators and Closures
+1. ⚪ More about Cargo and Crates.io
 
 Unless otherwise specified, the only tools _required_ to be installed are:
 

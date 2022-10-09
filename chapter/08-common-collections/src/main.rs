@@ -104,7 +104,7 @@ fn text_interface_to_add_employee_names_to_departments() {
         let mut line = String::new();
         stdin().read_line(&mut line).expect("Could not read line");
 
-        if line.is_empty() {
+        if line.trim_end().is_empty() {
             continue;
         }
 
@@ -124,7 +124,7 @@ fn text_interface_to_add_employee_names_to_departments() {
         println!("Enter employee name or just hit enter to abort");
         stdin().read_line(&mut line).expect("Could not read line");
 
-        if line.is_empty() {
+        if line.trim_end().is_empty() {
             continue;
         } else {
             line = line.trim_end().to_string();

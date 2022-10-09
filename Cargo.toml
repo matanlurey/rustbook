@@ -9,4 +9,7 @@ members = [
   "chapter/06-enums-patterns",
   "chapter/07-growing-projects",
   "chapter/08-common-collections",
+  "chapter/09-error-handling",
+  "chapter/10-generics-traits-lifetimes",
+  "chapter/11-automated-tests",
 ]
