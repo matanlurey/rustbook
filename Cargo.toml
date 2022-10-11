@@ -15,4 +15,5 @@ members = [
   "chapter/12-cli-program",
   "chapter/13-functional-features",
   "chapter/14-more-cargo",
+  "chapter/15-smart-pointers",
 ]
