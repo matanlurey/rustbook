@@ -47,9 +47,3 @@ also don't have very many capabilities. Most of the time a box is used when:
   ensure the data won't be copied when you do so.
 - You want to own a value and you only care that it's a type that implements a
   particular trait rather than being of a specific type.
-
-#### Using a `Box<T>` to Store Data on the Heap
-
-```rs
-
-```

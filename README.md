@@ -50,8 +50,8 @@ Every chapter in the book receives its own folder, i.e.
 1. 🟢 [An I/O Project: Building a Command Line Program](chapter/12-cli-program/README.md)
 1. 🟢 [Functional Langauge Features: Iterators and Closures](chapter/13-functional-features/README.md)
 1. 🟢 [More about Cargo and Crates.io](chapter/14-more-cargo/README.md)
-1. 🟡 Smart Pointers
-1. ⚪ Fearless Concurrency
+1. 🟢 [Smart Pointers](chapter/15-smart-pointers/README.md)
+1. 🟡 Fearless Concurrency
 1. ⚪ Object Oriented Programming Features of Rust
 1. ⚪ Patterns and Matching
 1. ⚪ Advanced Features
