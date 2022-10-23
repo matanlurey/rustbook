@@ -20,4 +20,5 @@ members = [
   "chapter/17-object-oriented",
   "chapter/18-patterns-matching",
   "chapter/19-advanced-features",
+  "chapter/20-web-server",
 ]
