@@ -51,11 +51,11 @@ Every chapter in the book receives its own folder, i.e.
 1. 🟢 [Functional Langauge Features: Iterators and Closures](chapter/13-functional-features/README.md)
 1. 🟢 [More about Cargo and Crates.io](chapter/14-more-cargo/README.md)
 1. 🟢 [Smart Pointers](chapter/15-smart-pointers/README.md)
-1. 🟡 Fearless Concurrency
-1. ⚪ Object Oriented Programming Features of Rust
-1. ⚪ Patterns and Matching
-1. ⚪ Advanced Features
-1. ⚪ Final Project: Building a Multithreaded Web Server
+1. 🟢 [Fearless Concurrency](chapter/16-fearless-concurrency/README.md)
+1. 🟢 [Object Oriented Programming Features of Rust](chapter/17-object-oriented/README.md)
+1. 🟢 [Patterns and Matching](chapter/18-patterns-matching/README.md)
+1. 🟢 [Advanced Features](chapter/19-advanced-features/README.md)
+1. 🟡 Final Project: Building a Multithreaded Web Server
 
 Unless otherwise specified, the only tools _required_ to be installed are:
 

@@ -1,4 +1,4 @@
-use std::{cell::RefCell, ops::Deref, rc::Weak};
+use std::{cell::RefCell, ops::Deref};
 
 fn main() {
     box_smart_pointer();

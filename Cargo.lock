@@ -3,6 +3,10 @@
 version = 3
 
 [[package]]
+name = "advanced-features"
+version = "0.1.0"
+
+[[package]]
 name = "automated-tests"
 version = "0.1.0"
 
@@ -33,6 +37,10 @@ version = "0.1.0"
 
 [[package]]
 name = "error-handling"
+version = "0.1.0"
+
+[[package]]
+name = "fearless-concurrency"
 version = "0.1.0"
 
 [[package]]
@@ -80,6 +88,14 @@ checksum = "329c933548736bc49fd575ee68c89e8be4d260064184389a5b77517cddd99ffb"
 
 [[package]]
 name = "more-cargo"
+version = "0.1.0"
+
+[[package]]
+name = "object-oriented"
+version = "0.1.0"
+
+[[package]]
+name = "patterns-matching"
 version = "0.1.0"
 
 [[package]]

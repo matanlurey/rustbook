@@ -16,4 +16,8 @@ members = [
   "chapter/13-functional-features",
   "chapter/14-more-cargo",
   "chapter/15-smart-pointers",
+  "chapter/16-fearless-concurrency",
+  "chapter/17-object-oriented",
+  "chapter/18-patterns-matching",
+  "chapter/19-advanced-features",
 ]
