@@ -55,7 +55,7 @@ Every chapter in the book receives its own folder, i.e.
 1. 🟢 [Object Oriented Programming Features of Rust](chapter/17-object-oriented/README.md)
 1. 🟢 [Patterns and Matching](chapter/18-patterns-matching/README.md)
 1. 🟢 [Advanced Features](chapter/19-advanced-features/README.md)
-1. 🟡 Final Project: Building a Multithreaded Web Server
+1. 🟢 [Final Project: Building a Multithreaded Web Server](chapter/20-web-server/README.md)
 
 Unless otherwise specified, the only tools _required_ to be installed are:
 
